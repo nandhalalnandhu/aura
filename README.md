@@ -37,10 +37,14 @@ npm install
 ### Start the developement server
 
 # In backend
+
+cd backend
 npm start
 
 # In frontend
-npm  run dev
+
+cd frontend
+npm run dev
 
 #USER INTERFACE
 
