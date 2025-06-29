@@ -9,6 +9,7 @@ This is a full-stack document collaboration workspace platform, built using the 
 - 🔐 **Secure Authentication**: Robust user authentication and access controls.
 - 🗂️ **Organized Workspaces**: Manage documents efficiently with a clean UI.
 - 📄 **Rich Editor**: Intuitive WYSIWYG experience for seamless writing and formatting.
+- 🔍 Powerful Search: Quickly find documents, content, or mentions across your workspace with full-text search.
 
 ## 🛠️ Tech Stack
 
