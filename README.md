@@ -43,3 +43,9 @@ npm start
 # In frontend/
 npm  run dev
 
+User interface 
+
+![image alt](https://github.com/nandhalalnandhu/aura/blob/cb1fc754b8bf4a30d48f8233faa58d694465d12e/AURA-06-29-2025_04_07_PM.png)
+
+
+
