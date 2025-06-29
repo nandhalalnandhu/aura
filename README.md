@@ -50,7 +50,7 @@ npm  run dev
 ![image alt](https://github.com/nandhalalnandhu/aura/blob/cb1fc754b8bf4a30d48f8233faa58d694465d12e/AURA-06-29-2025_04_07_PM.png)
 
 ### Home Page 
-![image alt](https://github.com/nandhalalnandhu/aura/blob/cb1fc754b8bf4a30d48f8233faa58d694465d12e/AURA-06-29-2025_04_07_PM.png)
+![image alt](https://github.com/nandhalalnandhu/aura/blob/main/AURA-06-29-2025_04_08_PM.png?raw=true)
 
 ### Document saved collections 
 ![image alt](https://github.com/nandhalalnandhu/aura/blob/13410957b6da55b507b0897e7a1a8a9bcb80aee9/AURA-06-29-2025_04_08_PM%20(1).png)
