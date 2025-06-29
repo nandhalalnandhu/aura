@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken, removeToken } from "../utils/auth";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api", // Your backend API URL
+  baseURL: import.meta.env.VITE_API_BASE_URL || "https://lora-drw5.onrender.com/api", // Your backend API URL
   headers: {
     "Content-Type": "application/json", 
   },
