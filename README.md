@@ -37,15 +37,24 @@ npm install
 
 ### Start the developement server
 
-# In backend/
+# In backend
 npm start
 
-# In frontend/
+# In frontend
 npm  run dev
 
-User interface 
+#User interface/ 
 
+  
+### Login &  Register , Forget Password
 ![image alt](https://github.com/nandhalalnandhu/aura/blob/cb1fc754b8bf4a30d48f8233faa58d694465d12e/AURA-06-29-2025_04_07_PM.png)
 
+### Home 
+![image alt](https://github.com/nandhalalnandhu/aura/blob/cb1fc754b8bf4a30d48f8233faa58d694465d12e/AURA-06-29-2025_04_07_PM.png)
 
+### Document saved collections 
+![image alt](https://github.com/nandhalalnandhu/aura/blob/cb1fc754b8bf4a30d48f8233faa58d694465d12e/AURA-06-29-2025_04_07_PM.png)
 
+### Document Editor &  Ai integration
+
+![image alt](https://github.com/nandhalalnandhu/aura/blob/cb1fc754b8bf4a30d48f8233faa58d694465d12e/AURA-06-29-2025_04_07_PM.png)
