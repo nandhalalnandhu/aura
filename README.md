@@ -18,6 +18,7 @@ This is a full-stack document collaboration workspace platform, built using the 
 - **Database**: MongoDB
 - **Authentication**: JWT & bcrypt
 - **AI Integration**: Gemini API (or other NLP models)
+- Architecture:- Modular
 
 ## 🚀 Getting Started
 
