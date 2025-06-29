@@ -42,7 +42,7 @@ npm start
 # In frontend
 npm  run dev
 
-#User interface/ 
+#USER INTERFACE
 
   
 ### Login &  Register , Forget Password  
