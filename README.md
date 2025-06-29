@@ -16,7 +16,6 @@ This is a full-stack document collaboration workspace platform, built using the 
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT & bcrypt
-- **Real-Time**: Socket.IO or WebSockets
 - **AI Integration**: Gemini API (or other NLP models)
 
 ## 🚀 Getting Started
