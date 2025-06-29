@@ -2,6 +2,10 @@
 
 This is a full-stack document collaboration workspace platform, built using the MERN (MongoDB, Express.js, React, Node.js) stack. Inspired by leading document workspace solutions, it offers a rich, intuitive environment for teams and individuals to create, organize, and share content seamlessly. With robust authentication, real-time editing features, integrated AI, and intelligent collaboration tools, platform aims to streamline knowledge sharing and productivity.
 
+WEBSITE VIDEO:
+
+https://github.com/nandhalalnandhu/aura/blob/0b77eacc83accf673c0ef0b604a20e97af608c4a/RA~2.mp4
+
 ## ✨ Features
 
 - 🧠 **AI-Integrated**: Smart assistance for faster, better content creation.
