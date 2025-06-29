@@ -46,7 +46,7 @@ npm  run dev
 #User interface/ 
 
   
-### Login &  Register , Forget Password
+### Login &  Register , Forget Password  
 ![image alt](https://github.com/nandhalalnandhu/aura/blob/main/AURA-06-29-2025_04_30_PM.png?raw=true)
 
 ### Home Page 
