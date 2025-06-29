@@ -1,6 +1,6 @@
 # Auraa
 
-**Auraa** is a full-stack document collaboration workspace built with the MERN stack (MongoDB, Express.js, React, Node.js). Inspired by modern document platforms, Auraa empowers teams and individuals to create, edit, and manage content in real time with ease.
+This is a full-stack document collaboration workspace platform, built using the MERN (MongoDB, Express.js, React, Node.js) stack. Inspired by leading document workspace solutions, it offers a rich, intuitive environment for teams and individuals to create, organize, and share content seamlessly. With robust authentication, real-time editing features, integrated AI, and intelligent collaboration tools, platform aims to streamline knowledge sharing and productivity.
 
 ## ✨ Features
 
