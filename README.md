@@ -6,7 +6,7 @@
 
 - 🧠 **AI-Integrated**: Smart assistance for faster, better content creation.
 - ⚡ **Real-Time Collaboration**: Work together live on the same document.
-- 🔐 **Secure Authentication**: JWT user authentication and access controls.
+- 🔐 **Secure Authentication**: Robust user authentication and access controls.
 - 🗂️ **Organized Workspaces**: Manage documents efficiently with a clean UI.
 - 📄 **Rich Editor**: Intuitive WYSIWYG experience for seamless writing and formatting.
 
