@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import api from "../api/axios";
 import logo from "../assets/Stacked_RGB_Purple-Photoroom.png";
 import { toast } from "react-toastify";
+import { Eye, EyeOff } from 'lucide-react'; // Importing icons from lucide-react
+import "../App.css"
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -11,12 +13,45 @@ const Register = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false); 
 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    // Optional: email format check
+    const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    // Strong password check
+    const isStrongPassword = (password) => {
+      const regex =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
+      return regex.test(password);
+    };
+
+    // Validate email format
+    if (!isValidEmail(email)) {
+      const msg = "Invalid email format";
+      setError(msg);
+      setSuccess("");
+      toast.error(msg);
+      setLoading(false);
+      return;
+    }
+
+    // Validate strong password
+    if (!isStrongPassword(password)) {
+      const msg =
+        "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.";
+      setError(msg);
+      setSuccess("");
+      toast.error(msg);
+      setLoading(false);
+      return;
+    }
+
     try {
       await api.post("/auth/register", { username, email, password });
       setSuccess("Registration successful! Please login.");
@@ -46,10 +81,10 @@ const Register = () => {
           Sign Up
           <img src={logo} alt="" width={30} />
         </h2>
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+        {/* {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         {success && (
           <p className="text-green-500 text-center mb-4">{success}</p>
-        )}
+        )} */}
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -90,13 +125,21 @@ const Register = () => {
             Password:
           </label>
           <input
-            type="password"
+            type={passwordVisible ? "text" : "password"} // Dynamically change type based on state
             id="password"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline line"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+           <button
+              type="button" // Important: Prevents form submission when clicked
+              onClick={() => setPasswordVisible(!passwordVisible)}
+              className="absolute inset-y-0 right-0 flex items-center text-black hover:text-gray-700 focus:outline-none eye2"
+              aria-label={passwordVisible ? "Hide password" : "Show password"}
+            >
+              {passwordVisible ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
         </div>
         <button
           type="submit"
