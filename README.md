@@ -59,11 +59,11 @@ npm run dev
 ![image alt](https://github.com/nandhalalnandhu/aura/blob/main/signinpage.png?raw=true)
 
 ### Home Page 
-![image alt](https://github.com/nandhalalnandhu/aura/blob/main/AURA-06-29-2025_04_08_PM.png?raw=true)
+![image alt](https://github.com/nandhalalnandhu/aura/blob/main/home.png?raw=true)
 
-### Document saved collections 
-![image alt](https://github.com/nandhalalnandhu/aura/blob/13410957b6da55b507b0897e7a1a8a9bcb80aee9/AURA-06-29-2025_04_08_PM%20(1).png)
+### Document List 
+![image alt](https://github.com/nandhalalnandhu/aura/blob/main/docu-list.png?raw=true)
 
 ### Document Editor &  Ai integration
 
-![image alt](https://github.com/nandhalalnandhu/aura/blob/main/AURA-06-29-2025_04_10_PM.png?raw=true)
+![image alt](https://github.com/nandhalalnandhu/aura/blob/main/docu-editor.png?raw=true)
