@@ -4,7 +4,7 @@ This is a full-stack document collaboration workspace platform, built using the 
 
 WEBSITE VIDEO:
 
-https://github.com/nandhalalnandhu/aura/blob/0b77eacc83accf673c0ef0b604a20e97af608c4a/RA~2.mp4
+https://github.com/nandhalalnandhu/aura/blob/f566a22fd37133398651b65a1ef5664a4db16d6d/AURA.mp4
 
 ## ✨ Features
 
