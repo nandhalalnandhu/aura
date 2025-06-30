@@ -56,7 +56,7 @@ npm run dev
 
   
 ### Login &  Register , Forget Password  
-![image alt](https://github.com/nandhalalnandhu/aura/blob/main/AURA-06-29-2025_04_30_PM.png?raw=true)
+![image alt](https://github.com/nandhalalnandhu/aura/blob/main/signinpage.png?raw=true)
 
 ### Home Page 
 ![image alt](https://github.com/nandhalalnandhu/aura/blob/main/AURA-06-29-2025_04_08_PM.png?raw=true)
