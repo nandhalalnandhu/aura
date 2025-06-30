@@ -4,18 +4,50 @@ const { generateToken } = require("../utils/jwtService");
 const nodemailer = require("nodemailer"); // For password reset email
 const crypto = require("crypto"); // For generating reset token
 
-// Register User
+// ✅ Email validation helper
+const isValidEmail = (email) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
+
+// ✅ Strong password validation helper
+const isStrongPassword = (password) => {
+  // Min 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
+  const regex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
+  return regex.test(password);
+};
+
+// ✅ Register user controller
 const registerUser = async (req, res) => {
   const { username, email, password } = req.body;
+
+  // ✅ Validate email format
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ message: "Invalid email format" });
+  }
+
+  // ✅ Validate strong password
+  if (!isStrongPassword(password)) {
+    return res.status(400).json({
+      message:
+        "Password must be at least 8 characters and include uppercase, lowercase, number, and special character",
+    });
+  }
+
   try {
+    // ✅ Check if user already exists
     let user = await User.findOne({ email });
     if (user) {
       return res.status(400).json({ message: "User already exists" });
     }
+
+    // ✅ Hash password and create user
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
     user = await User.create({ username, email, password: hashedPassword });
 
+    // ✅ Respond with token and user info
     res.status(201).json({
       _id: user._id,
       username: user.username,
@@ -26,7 +58,6 @@ const registerUser = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
 // Login User
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
@@ -62,7 +93,10 @@ const forgotPassword = async (req, res) => {
 
     // Generate reset token and hash it
     const resetToken = crypto.randomBytes(32).toString("hex");
-    const hashedToken = crypto.createHash("sha256").update(resetToken).digest("hex");
+    const hashedToken = crypto
+      .createHash("sha256")
+      .update(resetToken)
+      .digest("hex");
 
     // Set token + expiry on user
     user.passwordResetToken = hashedToken;
@@ -102,7 +136,7 @@ const forgotPassword = async (req, res) => {
 };
 
 // Reset Password - Step 2: Update Password
- const resetPassword = async (req, res) => {
+const resetPassword = async (req, res) => {
   const { token } = req.params;
   const { password } = req.body;
 
