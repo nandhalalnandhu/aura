@@ -4,6 +4,10 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import api from "../api/axios";
 import { debounce } from "lodash"; // npm install lodash
+import { HashLoader } from 'react-spinners';
+import "../App.css"
+import { toast } from "react-toastify";
+
 
 const DocumentDetail = () => {
   const { id } = useParams();
@@ -75,9 +79,13 @@ const DocumentDetail = () => {
   };
 
   const Done = () => {
+  toast.success("Document saved successfully!");
+  setTimeout(() => {
     navigate("/documents");
-    window.location.reload(); // To trigger App.jsx re-render and remove Navbar
-  };
+    window.location.reload(); // optional: if you want to force reload App
+  }, 1000); // delay to allow toast to show before navigating
+};
+
 
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this document?")) {
@@ -120,7 +128,7 @@ const DocumentDetail = () => {
   ];
 
   if (loading)
-    return <div className="text-center mt-8">Loading document...</div>;
+    return <div className="text-center mt-8 loader">   <HashLoader color="rgb(145,70,255)" size={50} /></div>;
   if (error)
     return <div className="text-center mt-8 text-red-500">{error}</div>;
   if (!document)
