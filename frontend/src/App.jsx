@@ -12,6 +12,8 @@ import Navbar from './components/Navbar';
 import { getToken } from './utils/auth';
 import './index.css';
 
+  import { ToastContainer, toast } from 'react-toastify';
+
 
 const PrivateRoute = ({ children }) => {
   const isAuthenticated = getToken();
@@ -32,7 +34,8 @@ function App() {
   return (
     <Router>
       {isLoggedIn && <Navbar />}
-      <div className="container mx-auto p-2 rounded bg-blue">
+        <ToastContainer position="top-right" autoClose={3000} />
+      <div className="container mx-auto p-1 rounded bg-blue">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
